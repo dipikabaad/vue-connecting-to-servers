@@ -3,10 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 import { routes } from './routes';
 import 'bootstrap/dist/css/bootstrap.css';
-import VueResource from 'vue-resource';
-
 
 Vue.config.productionTip = false
 
@@ -52,7 +51,6 @@ router.beforeEach((to, from, next) => {
 
   next();
 });
-
 
 Vue.use(VueResource);
 
