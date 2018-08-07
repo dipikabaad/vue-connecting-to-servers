@@ -70,6 +70,11 @@
                 reviewResource: null
             };
         },
+        http:{
+            headers:{
+                'X-CSRF-TOKEN':'VERY_SECURE_TOKEN_HERE'
+            }
+        },
         created() {
             let customActions = {
                 softDelete: {
