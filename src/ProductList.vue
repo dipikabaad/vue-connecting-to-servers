@@ -41,6 +41,12 @@
                 products: []
             };
         },
+        created(){
+            this.$http.get('http://localhost:3000/products').then(response =>
+                    response.json()
+            , response => 
+                    alert("Error")).then(products => this.products = products);
+        },
         methods: {
             addProductToCart(product, quantity) {
                 eventBus.$emit('addItemToCart', {
